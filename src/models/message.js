@@ -8,7 +8,19 @@ var messageSchema = new Schema({
     },
     phone: {
         type: String,
-        required: false
+        required: true
+    },
+    sid : {
+        type: String
+    },
+    messageReceiverId: {
+        type: String
+    },
+    first: {
+        type: String
+    },
+    date: {
+        type: Date
     }
 });
 const messageModel = mongoose.model('messageSchema', messageSchema);
