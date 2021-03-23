@@ -18,4 +18,5 @@ app.use('/api', contact);
 
 app.listen(config.port, function () {
     console.log(config.port);
+    console.log(process.env, process.env.TWILIO_ACCOUNT_SID);
 })
