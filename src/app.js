@@ -8,7 +8,6 @@ import cors from 'cors';
 const router = Router();
 const app = express();
 app.use(cors());
-const port = config.port;
 console.log("*************");  
 // parse application/json
 app.use(bodyParser.json())
@@ -17,6 +16,6 @@ mongoose.connect('mongodb://localhost:27017/contactApp', { useNewUrlParser: true
 })
 app.use('/api', contact);
 
-app.listen(port, function () {
-    console.log(port);
+app.listen(config.port, function () {
+    console.log(config.port);
 })

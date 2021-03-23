@@ -1,6 +1,18 @@
 const config = {
-    'secret': 'supersecret',
-    'port': '4040',
-    'domain': 'http://localhost:'
+    env: process.env.NODE_ENV,
+    devMode:
+        {
+        'secret': 'supersecret',
+        'port' : '3000',
+        'domain':'http://localhost:'
+        },
+
+    prodMode:
+        {
+        'secret': 'supersecret',
+        'port' : '3000',
+        'domain':''
+        }
 }
-export default config;
+
+module.exports = config[config.env];
