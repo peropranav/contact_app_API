@@ -9,6 +9,7 @@ const router = Router();
 const app = express();
 app.use(cors());
 console.log("*************");  
+console.log(process.env, process.env.TWILIO_ACCOUNT_SID);
 // parse application/json
 app.use(bodyParser.json())
 mongoose.connect('mongodb://localhost:27017/contactApp', { useNewUrlParser: true }).catch(err=>{
@@ -18,5 +19,4 @@ app.use('/api', contact);
 
 app.listen(config.port, function () {
     console.log(config.port);
-    console.log(process.env, process.env.TWILIO_ACCOUNT_SID);
 })
