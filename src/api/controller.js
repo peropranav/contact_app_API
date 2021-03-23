@@ -36,8 +36,8 @@ export const getContactById = async (req,res) => {
 }
 
 export const sendMessage = async (req,res) => {
-const accountSid = 'AC5d53165ec7f81b58fa7223a3d6946c64';
-const authToken = 'df0c0b9688aef1b5047d9de422e5bde9';
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 client.messages
