@@ -10,7 +10,7 @@ const config = {
     prodMode:
         {
         'secret': 'supersecret',
-        'port' : '80',
+        'port' : '4040',
         'domain':''
         }
 }
